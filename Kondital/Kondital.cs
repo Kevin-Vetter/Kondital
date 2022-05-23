@@ -4,26 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kondital
+namespace KonditalClass
 {
+
+
     public class Kondital
     {
-        public int idk()
-        {
-            return 0;
-        }
 
-        public Kondital(int minPuls, int maxPuls)
+        static public double BeregnKondital(int hvilePuls, int maxPuls)
         {
-            MinPuls = minPuls;
-            MaxPuls = maxPuls;
+            return ((maxPuls / hvilePuls) * 15.3);
         }
-        public Kondital()
-        {
-
-        }
-
-        public int MinPuls { get; set; }
-        public int MaxPuls { get; set; }
     }
 }
