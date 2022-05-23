@@ -1,22 +1,14 @@
 ﻿using KonditalClass;
 
-int maxPuls;
-int hvilePuls;
+Console.WriteLine("Indtast maximal puls: ");
+int maxPuls = Kondital.TryParse();
+Kondital.Wait();
+Console.WriteLine("Indtast hvile puls: ");
+int hvilePuls = Kondital.TryParse();
+Kondital.Wait();
+Console.WriteLine("Indtast vægt: ");
+int vaegt = Kondital.TryParse();
+Kondital.Wait();
 
-while (true)
-{
-    if (int.TryParse(Console.ReadLine(), out maxPuls))
-    {
-        break;
-    }
-}
-
-while (true)
-{
-    if (int.TryParse(Console.ReadLine(), out hvilePuls))
-    {
-        break;
-    }
-}
-Console.WriteLine(Kondital.BeregnKondital(hvilePuls, maxPuls));
-
+Console.WriteLine("Kondital: " + Kondital.BeregnKondital(hvilePuls, maxPuls) + " ml/kg/min");
+Console.WriteLine("Maximal Iltoptagelse: " + Kondital.BeregnIltoptagelseFeature(hvilePuls, maxPuls, vaegt) + " l/ml");
