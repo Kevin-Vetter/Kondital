@@ -24,7 +24,7 @@
         static public double BeregnIltoptagelseFeature(int hvilePuls, int maxPuls, int vaegt)
         {
             return Math.Round(BeregnKondital(hvilePuls, maxPuls) * vaegt / 1000, 1);
-        }
+        }   
 
         static public void Wait()
         {
